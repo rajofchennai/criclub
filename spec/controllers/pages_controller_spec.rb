@@ -22,7 +22,7 @@ describe PagesController do
 
 	    it "should have title" do
 	get 'contact'
-	response.should have_selector("title",:content => "| Contact")	
+	response.should have_selector("title",:content => "Contact")	
     end
   end
   
@@ -33,7 +33,7 @@ describe PagesController do
     end
 	    it "should have title" do
 	get 'about'
-	response.should have_selector("title",:content => "| about")	
+	response.should have_selector("title",:content => "about")	
     end
   end
   
