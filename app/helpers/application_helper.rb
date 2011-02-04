@@ -8,4 +8,8 @@ else
 end
 end
 
+def user
+user = "Rajesh"     
+end
+
 end

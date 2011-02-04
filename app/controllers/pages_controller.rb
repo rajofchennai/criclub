@@ -11,4 +11,7 @@ end
 def help
 @title = 'help'
 end
+def index
+@title = 'Cricclub'
+end
 end
