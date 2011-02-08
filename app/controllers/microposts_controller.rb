@@ -2,8 +2,10 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.xml
   def index
-    @microposts = Micropost.all
-
+  @newmicropost = Micropost.new  
+  @microposts = Micropost.all
+    session[:id] = "rail"
+    @user = session[:id]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @microposts }

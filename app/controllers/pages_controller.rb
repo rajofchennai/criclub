@@ -14,4 +14,8 @@ end
 def index
 @title = 'Cricclub'
 end
+def show 
+@title = 'Home'
+@user = "Rajesh"
+end
 end

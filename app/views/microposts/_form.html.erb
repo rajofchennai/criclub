@@ -1,23 +1,23 @@
-<%= form_for(@micropost) do |f| %>
-  <% if @micropost.errors.any? %>
+<%= form_for(@newmicropost) do |f| %>
+  <% if @newmicropost.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+      <h2><%= pluralize(@newmicropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
 
       <ul>
-      <% @micropost.errors.full_messages.each do |msg| %>
+      <% @newmicropost.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
+  <% f.submit %>
   <div class="field">
     <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= f.text_area :content %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+      <input type="hidden" name="micropost[:user_id]" value="<%= @user %>" />
+	
   </div>
   <div class="actions">
     <%= f.submit %>
