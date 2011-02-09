@@ -16,6 +16,6 @@ def index
 end
 def show 
 @title = 'Home'
-@user = "Rajesh"
+
 end
 end

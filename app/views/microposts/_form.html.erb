@@ -12,11 +12,11 @@
   <% end %>
   <% f.submit %>
   <div class="field">
-    <%= f.label :content %><br />
+    
     <%= f.text_area :content %>
   </div>
   <div class="field">
-      <input type="hidden" name="micropost[:user_id]" value="<%= @user %>" />
+      <input type="hidden" name="micropost[user_id]" value="<%= @user %>" />
 	
   </div>
   <div class="actions">

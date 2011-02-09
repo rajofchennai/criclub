@@ -3,7 +3,9 @@ class MicropostsController < ApplicationController
   # GET /microposts.xml
   def index
   @newmicropost = Micropost.new  
-  @microposts = Micropost.all
+  @microposts = Micropost.find(:all,:order => "created_at desc",:limit => 10 )
+    #use time instead of userid
+  
     session[:id] = "rail"
     @user = session[:id]
     respond_to do |format|
